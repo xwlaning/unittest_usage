@@ -44,3 +44,12 @@ tsuit = unittest.TestSuite()
 tsuit.addTests(unittest.TestLoader().loadTestsFromNames(["test_math_func.TestMathFunc", "test_math_func2.TestMathFunc2", "test_math_func3.TestMathFunc3"]))
 runner = unittest.TextTestRunner(verbosity=2)
 runner.run(tsuit)
+
+
+####################################################################################################################
+# TestLoader加载测试类
+####################################################################################################################
+tsuit = unittest.TestSuite()
+tsuit.addTests(unittest.TestLoader().loadTestsFromTestCase(TestMathFunc))
+runner = unittest.TextTestRunner(verbosity=2)
+runner.run(tsuit)
